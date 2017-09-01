@@ -13,10 +13,18 @@ namespace SteamMarketHelper {
 
         public Arquivo(string diret, int mode) {
             switch(mode) {
-                case 1: file = File.Open(diret, FileMode.Open, FileAccess.Read); break;
-                case 2: file = File.Open(diret, FileMode.Open, FileAccess.Write); break;
-                case 3: file = File.Open(diret, FileMode.Open, FileAccess.ReadWrite); break;
-                default: file = File.Open(diret, FileMode.Append, FileAccess.Write); break;
+                case 1:
+                    file = File.Open(diret, FileMode.Open, FileAccess.Read);
+                    break;
+                case 2:
+                    file = File.Open(diret, FileMode.Open, FileAccess.Write);
+                    break;
+                case 3:
+                    file = File.Open(diret, FileMode.Open, FileAccess.ReadWrite);
+                    break;
+                default:
+                    file = File.Open(diret, FileMode.Append, FileAccess.Write);
+                    break;
             }
         }
 
